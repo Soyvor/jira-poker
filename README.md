@@ -7,7 +7,7 @@ Static Chrome extension and admin page for Jira story point voting.
 1. Open `chrome://extensions` or can move to manage extensions.
 2. Enable Developer mode.
 3. Click "Load unpacked".
-4. Select [extension](/download/extension). ( open your folder location where extension is stored )
+4. Select [jira-poker](/download/extension). ( open your folder location where extension is stored )
 5. Open a Jira issue and click the extension icon. Chrome opens the extension as a side panel.
 
 ## Open The Admin Site
