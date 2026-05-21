@@ -8,7 +8,6 @@ Click the button below to download the latest version of the extension and admin
 
 [![Download ZIP](https://img.shields.io/badge/Download-Repository_ZIP-blue?style=for-the-badge&logo=github)](../../archive/refs/heads/main.zip)
 
-*(Note: If you are on a specific branch, this link will download the main branch. You can also download it by clicking the green **Code** button at the top of this GitHub page and selecting **Download ZIP**).*
 
 ---
 
