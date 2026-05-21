@@ -8,7 +8,6 @@ Click the button below to download **only** the Chrome extension folder as a ZIP
 
 [![Download Extension ZIP](https://img.shields.io/badge/Download-Extension_Only-blue?style=for-the-badge&logo=googlechrome)](https://download-directory.github.io/?url=https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/tree/main/extension)
 
-*(Note: Replace `YOUR_GITHUB_USERNAME` and `YOUR_REPO_NAME` in the link above with your actual GitHub username and repository name before saving).*
 
 ---
 
