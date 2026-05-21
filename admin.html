@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jira Poker Admin</title>
+    <link rel="stylesheet" href="admin-styles.css">
+  </head>
+  <body>
+    <main class="landing">
+      <header class="nav">
+        <div class="brand">
+          <span class="brandMark">JP</span>
+          <strong>Jira Poker</strong>
+        </div>
+        <div class="navActions">
+          <a href="#access">Admin access</a>
+        </div>
+      </header>
+
+      <section id="login" class="hero">
+        <div class="heroCopy">
+          <p class="eyebrow">Open planning poker</p>
+          <h1 class="md-typescale-display-small">Estimate work without revealing the room.</h1>
+          <p class="lede">A lightweight Material 3 planning poker workspace for anonymous story point voting, Jira context, and clear team averages.</p>
+          <div class="featureRow">
+            <span>Anonymous votes</span>
+            <span>Jira-aware sessions</span>
+            <span>Mode + average</span>
+          </div>
+        </div>
+
+        <section id="access" class="loginCard">
+          <p class="eyebrow">Team admin</p>
+          <h2>Password access</h2>
+          <md-outlined-text-field id="password" label="Password" type="password"></md-outlined-text-field>
+          <md-filled-button id="unlock">Continue</md-filled-button>
+          <p id="loginError" class="hint"></p>
+        </section>
+      </section>
+
+      <section class="previewPanel">
+        <div class="mockToolbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="mockGrid">
+          <article>
+            <small>Rounded average</small>
+            <strong>3.5</strong>
+          </article>
+          <article>
+            <small>Mode</small>
+            <strong>3</strong>
+          </article>
+          <article>
+            <small>Votes</small>
+            <strong>6/7</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="dashboard" class="dashboard hidden">
+        <header class="dashboardHeader">
+          <div>
+            <p class="eyebrow">Configuration</p>
+            <h1>Users and admin view</h1>
+          </div>
+          <md-filled-tonal-button id="refresh">Refresh</md-filled-tonal-button>
+        </header>
+
+        <section class="panel">
+          <div class="inline">
+            <md-outlined-text-field id="newUser" label="Add username" placeholder="skazmi"></md-outlined-text-field>
+            <md-filled-button id="addUser">Add voter</md-filled-button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="sectionTitle">
+            <h2>Team members</h2>
+            <span id="count">0</span>
+          </div>
+          <div id="profiles" class="profiles"></div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="material-bundle.js"></script>
+    <script src="supabase.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

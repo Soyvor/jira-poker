@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jira Story Point Poker</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Jira Poker</p>
+          <h1 class="md-typescale-title-large">Planning room</h1>
+        </div>
+        <div class="topActions">
+          <md-text-button id="settingsButton" class="hidden">Settings</md-text-button>
+          <span id="roleBadge" class="badge">Loading</span>
+        </div>
+      </header>
+
+      <section id="settingsPanel" class="settingsPanel hidden">
+        <md-filled-tonal-button id="manageUsers">Manage users</md-filled-tonal-button>
+      </section>
+
+      <section id="setup" class="panel hidden">
+        <div class="inline">
+          <md-outlined-text-field id="username" label="Username" autocomplete="off" placeholder="yshukla"></md-outlined-text-field>
+          <md-filled-button id="saveUser">Save</md-filled-button>
+        </div>
+        <p class="hint">Use the same username configured by your team admin.</p>
+      </section>
+
+      <section id="jiraIssueCard" class="ticket hidden">
+        <div>
+          <p id="jiraTicketKey" class="eyebrow">Current Jira ticket</p>
+          <h2 id="jiraTicketTitle">Open a Jira ticket</h2>
+        </div>
+        <div class="meta">
+          <span id="jiraTicketType">Type</span>
+          <span id="jiraTicketPriority">Priority</span>
+        </div>
+      </section>
+
+      <section id="sessionIssueCard" class="ticket activeTicket hidden">
+        <div class="sectionTitle">
+          <div>
+            <p id="sessionTicketKey" class="eyebrow">Voting now</p>
+            <h2 id="sessionTicketTitle">Waiting for a vote</h2>
+          </div>
+          <span id="sessionPhase">Idle</span>
+        </div>
+        <div class="meta">
+          <span id="sessionTicketType">Type</span>
+          <span id="sessionTicketPriority">Priority</span>
+        </div>
+      </section>
+
+      <section id="adminPanel" class="panel hidden">
+        <div class="actions">
+          <md-filled-button id="startSession">Start vote</md-filled-button>
+          <md-filled-tonal-button id="revealNow">Reveal</md-filled-tonal-button>
+          <span id="timer" class="timerPill">15s</span>
+        </div>
+        <div id="adminSummary" class="summaryStrip"></div>
+        <div id="participants" class="cardTable"></div>
+        <div id="results" class="results hidden"></div>
+      </section>
+
+      <section id="voterPanel" class="panel hidden">
+        <div class="sectionTitle">
+          <h3>Your vote</h3>
+          <span id="voterTimer">Waiting</span>
+        </div>
+        <div class="soundRow">
+          <div id="soundStatus" class="soundStatus">Audio cue armed</div>
+          <label class="switchLabel" for="soundToggle">
+            <span>Sound</span>
+            <md-switch id="soundToggle" selected></md-switch>
+          </label>
+        </div>
+        <div class="pointGrid" id="pointGrid"></div>
+        <div class="inline">
+          <md-outlined-text-field id="customPoints" label="Custom points" inputmode="decimal" placeholder="0.5 to 5"></md-outlined-text-field>
+          <md-filled-button id="submitVote">Vote</md-filled-button>
+        </div>
+        <p id="voteStatus" class="hint">Join a session to vote anonymously.</p>
+      </section>
+
+      <section id="emptyState" class="empty hidden">
+        Open a Jira ticket, then reopen this extension.
+      </section>
+    </main>
+    <script type="module" src="material-bundle.js"></script>
+    <script src="supabase.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
